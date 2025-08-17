@@ -75,7 +75,7 @@ def recursive_write(name, items):
 
     # path of the file to write to passed in before hand
     # i.e breakpoint.lua file should have the classes contained in breakpoint category
-    path = os.path.join(doc_path, replace_char(name)+".lua")
+    path = os.path.join(doc_path, replace_char(name).lower()+".lua")
     with open(path, "w+") as f:
         f.write('return {\n')
         for item in items:
